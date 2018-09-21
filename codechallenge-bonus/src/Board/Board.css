@@ -1,0 +1,21 @@
+table td, table tr{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+table td{
+  width: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  margin: 0;
+}
+
+.tablediv {
+  margin: 0px;
+  width: 200px;
+  height: 200px;
+}
