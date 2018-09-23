@@ -6,7 +6,7 @@ import Card from '../Card/Card';
 import State from '../State/State';
 import Score from '../Score/Score';
 
-//
+
 class Board extends React.Component {
   constructor(props) {
     super(props);
@@ -26,9 +26,7 @@ class Board extends React.Component {
       ],
       board : [],
     };
-
     this.shuffle = this.shuffle.bind(this);
-
 
     this.numOfClick = 0;  // how many card is clicked
     this.preIndex = 0;   // the preclicked card's row number
@@ -150,6 +148,9 @@ class Board extends React.Component {
 
 // to shuffle the board, random display the board with two set of number
   shuffle(){
+    if (this.nameValue.value % 2 !== 0) {
+      alert('please enter the even number');
+    } else {
     this.timerCount = true;
     this.numOfClick = 0;
     this.preIndex = 0;
@@ -195,11 +196,8 @@ class Board extends React.Component {
         }
       ]
     });
-
+}
   }
-
-
-
 
   render() {
     return (
